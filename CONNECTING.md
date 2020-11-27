@@ -51,7 +51,7 @@ So in Hexchat:
   1. Enter whatever for *real name*
   1. Enter your username I gave you for your *user name*
   1. Change the *login method* drop down to *server password (/PASS)*
-  1. Set the *password* to the password I gave you for your user account!
+  1. Set the *password* to `username:password` (the *user name* I gave you, plus the password I gave you for your user account)
 
 Side note: if you have a weird client/want to identify manually you can use the command `/quote PASS someuser:somepassword`.
 
