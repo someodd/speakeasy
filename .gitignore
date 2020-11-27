@@ -1,0 +1,4 @@
+speakeasy-data/znc/moddata/
+speakeasy-data/znc/users/
+speakeasy-data/znc/configs/znc.conf.pre*
+*.swp
