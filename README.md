@@ -37,6 +37,17 @@ docker build -t speakeasy .
 docker run -d -v $(pwd)/speakeasy-data/tor:/var/lib/tor -v $(pwd)/speakeasy-data/znc:/znc-data -v $(pwd)/speakeasy-data/ngircd:/etc/ngircd --restart=always --net servicenet --hostname=speakeasy --ip=172.18.0.67 speakeasy
 ```
 
+## ufw
+
+I had to do this so I could access the Docker service from the hidden service configured on the host.
+
+```
+sudo ufw allow out on br-fe9a6659bb8c from 172.18.0.67
+sudo ufw allow out on br-fe9a6659bb8c from 172.18.0.1
+```
+
+`br-fe9a6659bb8c` is the interface created for my Docker "servicenet" on `172.18.0.0/16`.
+
 ## Inviting users
 
 Send users the `CONNECTING.md` file. You will have to give them your `.onion`
